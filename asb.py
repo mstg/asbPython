@@ -14,6 +14,9 @@ if __name__ == "__main__":
         if val == currentVal:
             should_continue = False
 
+        if int(currentVal)-1 > val:
+            should_continue = False
+
         if should_continue == True:
             currentVal = val
             methods.WmiSetBrightness(currentVal, 0)
